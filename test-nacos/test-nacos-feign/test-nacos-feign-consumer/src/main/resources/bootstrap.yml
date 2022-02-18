@@ -1,0 +1,9 @@
+server:
+  port: 8110
+spring:
+  application:
+    name: feign-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: alex.com:80

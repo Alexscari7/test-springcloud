@@ -1,0 +1,15 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: rest-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: alex.com:80
+
+
+logging:
+  level:
+    root: debug

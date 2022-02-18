@@ -1,0 +1,14 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: rest-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: alex.com:80
+
+
+logging:
+  level:
+    root: debug
