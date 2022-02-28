@@ -10,12 +10,11 @@ spring:
         server-addr: alex.com:80  # 默认端口号为8848
         file-extension: yaml  # 默认为.properties
         group: DEFAULT_GROUP  # 默认为DEFAULT_GROUP
-        ext-config:
-          - data-id: summary.yaml
-            group: DEFAULT_GROUP
-            refresh: true
+        shared-configs[0]:
+          data-id: nacos-config-shared.yaml
+          group: DEFAULT_GROUP
+          refresh: true
 # 客户端日志文件为~/logs/nacos/config.log
 # 监听的nacos文件默认为{prefix}-{profile}.{file-extension}
 # 未指定profile时，使用{prefix}.{file-extension}，指定了profile时，优先匹配{prefix}-{profile}.{file-extension}（spring类似）
 # 未指定namespace时，默认使用public命名空间
-# 该版本支持ext-config，但不支持shared-config[]方式
