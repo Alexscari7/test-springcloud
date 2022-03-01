@@ -13,4 +13,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface StorageService extends IService<StorageEntity> {
 
+    StorageEntity selectByProductId(long productId);
+
+    void deduct(long productId, int count);
+
 }
